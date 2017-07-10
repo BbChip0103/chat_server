@@ -14,24 +14,26 @@ while 1:
 	client_socket, address = server_socket.accept()
 	print ("연결 성공. 상대 아이피 :  ", address)
 
-	def send_handle :
+	def send_handle() :
 		data = input('SEND( TYPE q or Q to Quit) : ')
 		client_socket.send(data.encode('cp949'))
 		if(data == 'Q' or data == 'q'):
 			client_socket.close()
-			break;
+#			break;
 
-	def recv_handle :
+	def recv_handle() :
 		data = client_socket.recv(512).decode('cp949')
 		if(data == 'q' or data == 'Q'):
 			client_socket.close()
-			break;
+#			break;
 		else:
 			print ("RECEIVED : " , data)
 
+	threading._start_new_thread(send_handle,())
+	threading._start_new_thread(recv_handle,())
+
 	while 1:
-		threading._start_new_thread(send_handle,())
-		threading._start_new_thread(recv_handle,())
+		pass
 
 	break;
 server_socket.close()
