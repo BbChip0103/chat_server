@@ -34,7 +34,7 @@ void receive_handle(tcp::socket * _p_socket) {
 	else if (error)
 		throw boost::system::system_error(error);
 
-	boost::mutex::scoped_lock lock(io_mutex);
+	//boost::mutex::scoped_lock lock(io_mutex);
 
 	// 입력 받은 데이터를 cout를 이용해 출력
 	std::cout << "받은 메세지 : ";
@@ -49,7 +49,7 @@ void send_handle(tcp::socket * _p_socket) {
 
 	// 클라이언트에서 서버로 보낼 메세지를 입력받음
 	std::cout << "보낼 메세지 : ";
-	boost::mutex::scoped_lock lock(io_mutex);
+	//boost::mutex::scoped_lock lock(io_mutex);
 	std::cin.getline(buf_send.data(), eBuffSize);
 	int len_str = std::cin.gcount() - 1;
 

@@ -1,2 +1,4 @@
 ﻿  asynck_client_test.cpp
-c:\users\bbchip\desktop\채팅서버\asynch_serer_test\serer_test\asynck_client_test.cpp(55): warning C4244: '초기화 중': 'std::streamsize'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\chat_server\asynch_serer_test\serer_test\asynck_client_test.cpp(54): warning C4244: '초기화 중': 'std::streamsize'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  serer_test.vcxproj -> D:\Github\chat_server\asynch_serer_test\Debug\serer_test.exe
+  serer_test.vcxproj -> D:\Github\chat_server\asynch_serer_test\Debug\serer_test.pdb (Full PDB)
