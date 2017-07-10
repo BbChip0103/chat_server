@@ -16,7 +16,7 @@ while 1:
 
 	def send_handle() :
 		while True :
-			data = input('SEND( TYPE q or Q to Quit) : ')
+			data = input('보낼 메세지( q or Q 입력시 종료) : ')
 			client_socket.send(data.encode('cp949'))
 			if(data == 'Q' or data == 'q'):
 				client_socket.close()
@@ -29,7 +29,7 @@ while 1:
 				client_socket.close()
 				break;
 			else:
-				print ("RECEIVED : " , data)
+				print ("받은 메세지 : " , data)
 
 	threading._start_new_thread(send_handle,())
 	threading._start_new_thread(recv_handle,())
